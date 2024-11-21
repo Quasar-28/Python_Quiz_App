@@ -3,45 +3,49 @@ import random
 print('Welcome to The Quiz Game')
 print('-'*40)
 
-
 topics = [
     {
         "topic": "System Design",
         "data": [
             {
-                "question": "What is a microservice architecture?",
+                "question": "What is the primary purpose of a load balancer in a system design?",
                 "options": [
-                    "A single large application",
-                    "A collection of small, independent services",
-                    "A type of database",
-                    "A cloud storage solution"
+                    "To store data",
+                    "To distribute incoming traffic across servers",
+                    "To handle security authentication",
+                    "To replicate databases"
                 ],
-                "answer": "A collection of small, independent services"
+                "answer": "To distribute incoming traffic across servers"
             },
             {
-                "question": "Which protocol is commonly used for communication between microservices?",
-                "options": ["HTTP", "FTP", "SMTP", "IMAP"],
-                "answer": "HTTP"
+                "question": "What is a CDN (Content Delivery Network) used for?",
+                "options": [
+                    "Reducing latency and delivering content faster",
+                    "Encrypting user data",
+                    "Storing backup files",
+                    "Analyzing user behavior"
+                ],
+                "answer": "Reducing latency and delivering content faster"
             },
             {
-                "question": "What is the purpose of a message queue in system design?",
+                "question": "What is the primary benefit of using caching in system design?",
                 "options": [
-                    "To store large amounts of data",
-                    "To manage communication between distributed systems",
-                    "To provide a user interface",
-                    "To handle authentication"
+                    "Improved database schema",
+                    "Faster access to frequently used data",
+                    "Secure data encryption",
+                    "Increased system downtime"
                 ],
-                "answer": "To manage communication between distributed systems"
+                "answer": "Faster access to frequently used data"
             },
             {
-                "question": "What is the CAP theorem in distributed systems?",
+                "question": "What does horizontal scaling in a system mean?",
                 "options": [
-                    "Consistency, Availability, Partition Tolerance",
-                    "Concurrency, Accuracy, Performance",
-                    "Capacity, Accessibility, Persistence",
-                    "Control, Authentication, Privacy"
+                    "Adding more CPU or memory to a single server",
+                    "Adding more servers to handle increased load",
+                    "Replacing old servers with new ones",
+                    "Optimizing server configurations"
                 ],
-                "answer": "Consistency, Availability, Partition Tolerance"
+                "answer": "Adding more servers to handle increased load"
             }
         ]
     },
@@ -49,24 +53,29 @@ topics = [
         "topic": "Data Structures",
         "data": [
             {
-                "question": "What is the time complexity of inserting an element at the beginning of a linked list?",
-                "options": ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
-                "answer": "O(1)"
+                "question": "Which data structure is used for breadth-first search (BFS) in a graph?",
+                "options": ["Stack", "Queue", "Heap", "Hash Table"],
+                "answer": "Queue"
             },
             {
-                "question": "Which data structure uses the principle of Last In, First Out (LIFO)?",
-                "options": ["Stack", "Linked List", "Queue", "Hash Table"],
+                "question": "What is the time complexity of searching for an element in a balanced binary search tree (BST)?",
+                "options": ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
+                "answer": "O(log n)"
+            },
+            {
+                "question": "Which data structure is used to perform recursion?",
+                "options": ["Queue", "Array", "Stack", "Tree"],
                 "answer": "Stack"
             },
             {
-                "question": "What is the main advantage of using a hash table?",
-                "options": ["Fast access to elements", "Better memory utilization", "Easier sorting", "Fixed size"],
-                "answer": "Fast access to elements"
-            },
-            {
-                "question": "Which of the following data structures is used to implement a priority queue?",
-                "options": ["Queue", "Graph", "Heap", "Stack"],
-                "answer": "Heap"
+                "question": "What is a circular queue?",
+                "options": [
+                    "A queue where the last position is connected to the first",
+                    "A queue with unlimited size",
+                    "A queue implemented using a tree",
+                    "A queue that uses two stacks"
+                ],
+                "answer": "A queue where the last position is connected to the first"
             }
         ]
     },
@@ -74,34 +83,39 @@ topics = [
         "topic": "DBMS",
         "data": [
             {
-                "question": "Which of the following is a type of NoSQL database?",
-                "options": ["Relational Database", "Graph Database", "Flat File", "Spreadsheet"],
-                "answer": "Graph Database"
-            },
-            {
-                "question": "What is a foreign key in a database?",
+                "question": "What does ACID stand for in database management systems?",
                 "options": [
-                    "A key that uniquely identifies each record in a table",
-                    "A key used to link two tables together",
-                    "A key that allows duplicate records",
-                    "A key used to store large amounts of data"
+                    "Authentication, Control, Isolation, Distribution",
+                    "Atomicity, Consistency, Isolation, Durability",
+                    "Accessibility, Capacity, Integration, Dependency",
+                    "Accuracy, Completeness, Integration, Data Integrity"
                 ],
-                "answer": "A key used to link two tables together"
+                "answer": "Atomicity, Consistency, Isolation, Durability"
             },
             {
-                "question": "Which SQL statement is used to update data in a database?",
-                "options": ["INSERT", "SELECT", "UPDATE", "DELETE"],
-                "answer": "UPDATE"
-            },
-            {
-                "question": "What is normalization in database design?",
+                "question": "Which type of database is MongoDB?",
                 "options": [
-                    "The process of organizing data to reduce redundancy",
-                    "The process of backing up data",
-                    "The process of indexing data",
-                    "The process of encrypting data"
+                    "Relational Database",
+                    "Key-Value Store",
+                    "Document-Oriented Database",
+                    "Graph Database"
                 ],
-                "answer": "The process of organizing data to reduce redundancy"
+                "answer": "Document-Oriented Database"
+            },
+            {
+                "question": "What is the main function of an index in a database?",
+                "options": [
+                    "To provide security",
+                    "To speed up data retrieval",
+                    "To store backup data",
+                    "To enforce data integrity"
+                ],
+                "answer": "To speed up data retrieval"
+            },
+            {
+                "question": "Which SQL statement is used to remove a table from a database?",
+                "options": ["DELETE", "DROP", "TRUNCATE", "ALTER"],
+                "answer": "DROP"
             }
         ]
     },
@@ -109,43 +123,49 @@ topics = [
         "topic": "OOPs",
         "data": [
             {
-                "question": "Which of the following is a benefit of encapsulation?",
-                "options": ["Improved code readability", "Reduced code size", "Increased security", "Faster execution"],
-                "answer": "Increased security"
+                "question": "What is method overloading in OOP?",
+                "options": [
+                    "Defining multiple methods with the same name but different parameters",
+                    "Overriding a method in a derived class",
+                    "Hiding data members of a class",
+                    "Inheriting from multiple classes"
+                ],
+                "answer": "Defining multiple methods with the same name but different parameters"
             },
             {
-                "question": "What is polymorphism in OOP?",
+                "question": "Which of the following represents dynamic binding in OOP?",
                 "options": [
-                    "The ability to create multiple classes",
-                    "The ability to process objects differently based on their data type",
-                    "The ability to hide data",
-                    "The ability to inherit from multiple classes"
+                    "Resolving a method call at compile time",
+                    "Resolving a method call at runtime",
+                    "Using static methods in a class",
+                    "Inheriting from a base class"
                 ],
-                "answer": "The ability to process objects differently based on their data type"
+                "answer": "Resolving a method call at runtime"
             },
             {
-                "question": "Which of the following is an example of inheritance in OOP?",
+                "question": "What is an abstract class in OOP?",
                 "options": [
-                    "A class inheriting methods and properties from another class",
-                    "A class defining private data members",
-                    "A class implementing multiple interfaces",
-                    "A class containing static methods"
+                    "A class with only private methods",
+                    "A class with no methods or properties",
+                    "A class that cannot be instantiated directly",
+                    "A class that allows multiple inheritances"
                 ],
-                "answer": "A class inheriting methods and properties from another class"
+                "answer": "A class that cannot be instantiated directly"
             },
             {
-                "question": "What is abstraction in OOP?",
+                "question": "What is the main purpose of a constructor in OOP?",
                 "options": [
-                    "Hiding the implementation details and showing only the functionality",
-                    "Combining data and methods into a single unit",
-                    "Allowing multiple inheritance",
-                    "Using pointers to access data"
+                    "To destroy objects",
+                    "To initialize an object’s properties",
+                    "To implement polymorphism",
+                    "To encapsulate methods"
                 ],
-                "answer": "Hiding the implementation details and showing only the functionality"
+                "answer": "To initialize an object’s properties"
             }
         ]
     }
 ]
+
 
 users = {}
 
