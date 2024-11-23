@@ -326,7 +326,6 @@ def signIn():
         print("-"*40)
         startQuiz()
     
-
 def signUp():
     na = input("Enter your name: ")
     en = input("Enter your enrollment: ")
