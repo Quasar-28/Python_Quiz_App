@@ -46,6 +46,26 @@ topics = [
                     "Optimizing server configurations"
                 ],
                 "answer": "Adding more servers to handle increased load"
+            },
+            {
+                "question": "What is the purpose of a reverse proxy?",
+                "options": [
+                    "To forward requests to backend servers",
+                    "To store data",
+                    "To handle user authentication",
+                    "To encrypt data"
+                ],
+                "answer": "To forward requests to backend servers"
+            },
+            {
+                "question": "What is the main advantage of microservices architecture?",
+                "options": [
+                    "Monolithic codebase",
+                    "Independent deployment of services",
+                    "Single point of failure",
+                    "Tightly coupled components"
+                ],
+                "answer": "Independent deployment of services"
             }
         ]
     },
@@ -76,6 +96,26 @@ topics = [
                     "A queue that uses two stacks"
                 ],
                 "answer": "A queue where the last position is connected to the first"
+            },
+            {
+                "question": "What is a priority queue?",
+                "options": [
+                    "A queue where elements are processed in FIFO order",
+                    "A queue where elements are processed based on priority",
+                    "A queue with unlimited size",
+                    "A queue implemented using a linked list"
+                ],
+                "answer": "A queue where elements are processed based on priority"
+            },
+            {
+                "question": "What is the main advantage of a linked list over an array?",
+                "options": [
+                    "Constant time access to elements",
+                    "Dynamic size and ease of insertion/deletion",
+                    "Fixed size",
+                    "Better cache performance"
+                ],
+                "answer": "Dynamic size and ease of insertion/deletion"
             }
         ]
     },
@@ -116,6 +156,26 @@ topics = [
                 "question": "Which SQL statement is used to remove a table from a database?",
                 "options": ["DELETE", "DROP", "TRUNCATE", "ALTER"],
                 "answer": "DROP"
+            },
+            {
+                "question": "What is a foreign key in a relational database?",
+                "options": [
+                    "A key that uniquely identifies a record",
+                    "A key used to link two tables together",
+                    "A key that is used for indexing",
+                    "A key that is used for encryption"
+                ],
+                "answer": "A key used to link two tables together"
+            },
+            {
+                "question": "What is normalization in database design?",
+                "options": [
+                    "The process of organizing data to reduce redundancy",
+                    "The process of encrypting data",
+                    "The process of backing up data",
+                    "The process of indexing data"
+                ],
+                "answer": "The process of organizing data to reduce redundancy"
             }
         ]
     },
@@ -161,6 +221,26 @@ topics = [
                     "To encapsulate methods"
                 ],
                 "answer": "To initialize an object’s properties"
+            },
+            {
+                "question": "What is inheritance in OOP?",
+                "options": [
+                    "A mechanism to achieve code reuse",
+                    "A way to hide data",
+                    "A method to overload functions",
+                    "A technique to encapsulate data"
+                ],
+                "answer": "A mechanism to achieve code reuse"
+            },
+            {
+                "question": "What is polymorphism in OOP?",
+                "options": [
+                    "The ability to take many forms",
+                    "The ability to hide data",
+                    "The ability to overload methods",
+                    "The ability to inherit from multiple classes"
+                ],
+                "answer": "The ability to take many forms"
             }
         ]
     }
@@ -214,13 +294,17 @@ def playGame():
         startQuiz()
     else:
         print("Thank you for playing")
-
+        UserRequest = input("Do you wannt to go to home(yes/no) : ")
+        if UserRequest == 'yes' :
+            main()
+        else :
+            exit()
 
 def signIn():
     username = input("Enter your username: ")
     password = input("Enter your password: ")
-    if type(username) != str or type(password) != str:
-        print("Invalid input")
+    if not username or not password:
+        print("Username and password can't be empty")
         signIn()
     if (username in users.keys() and users[username] == password):
         print("You have successfully signed in")
@@ -234,8 +318,8 @@ def signIn():
 def signUp():
     username = input("Enter your username: ")
     password = input("Enter your password: ")
-    if type(username) != str or type(password) != str:
-        print("Invalid input")
+    if not username or not password :
+        print("Username and password can't be empty")
         signUp()
     users[username] = password
     print("You have successfully signed up")
