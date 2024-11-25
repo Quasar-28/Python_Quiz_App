@@ -322,7 +322,6 @@ def signIn():
             print("Invalid username or password")
             print("Or You need to sign up first")
             main()
-        print("You have successfully signed in")
         print("-"*40)
         startQuiz()
     
